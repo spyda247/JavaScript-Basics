@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-Basics</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>JavaScript-Basics</h1>
+      <p>Introduction to JavaScript</p>
+      <h3>Variables</h3>
+      <p>
+        Variable are like boxes where you place or store values in your program
+      </p>
+      <ul>
+        <li>
+          const: A variable with a constant value during program excecution<br />
+          <code
+            >const VAT = 7.5;<br />console.log('Value Added tax is' + VAT);
+          </code>
+        </li>
+        <li>
+          let: A variable whose value can change during program excecution<br />
+          <code
+            >let fruit = 'orange';<br />console.log('My favorite fruit is ' +
+            fruit);</code
+          ><br />
+          <code>fruit = 'Banana';</code><br /><code
+            >console.log('My favorite fruit is now ' + fruit);</code
+          >
+        </li>
+      </ul>
+      <h3>Data Types</h3>
+      <ol>
+        <li>
+          <h4>Number</h4>
+          <p>Number Type represent both floating point and integer numbers</p>
+          <code>const myInteger = 7;<br />const myFloat = 3.40;</code>
+        </li>
+        <li>
+          <h4>String</h4>
+          <p>
+            Strings are text which are enclosed in quotes either single or
+            double quotes
+          </p>
+          <code
+            >let myText = 'This is a single quote string';<br />
+            console.log(myText);<br />myText = "This is double quote string";<br />console.log(myText);
+          </code>
+          <br /><br />
+          <ul>
+            <li>
+              Template Literals<br />
+              <em
+                >Template Literals allow multiple line strings and also support
+                string interpolation and are enclosed by tthe backtick (``)
+                character</em
+              ><br />
+              <code
+                >let sentence = `Look how Elegant this <br />
+                multiple Line text. It is on multiple lines`</code
+              ><br /><br />
+            </li>
+            <li>
+              String Interpolation: <br />
+              <em
+                >This a means of extracting the value of a variable within a
+                string enclosed by a template literal(``). For example</em
+              >
+              <code>console.log(`My Favourite fruit is ${fruit}`)</code>
+            </li>
+            <li>
+              <h5>String Methods</h5>
+              <ul>
+                <li>
+                  ToLowerCase<br />
+                  <em>Converts a string to lower case</em><br /><code
+                    >'Hello'.toLowerCase();</code
+                  >
+                </li>
+                <li>
+                  ToUpperCase<br />
+                  <em>Converts a string to upper case</em><br /><code
+                    >'Hello'.toUpperCase();</code
+                  >
+                </li>
+                <li>
+                  Repeat<br /><em>Repeats section of text within a string</em
+                  ><br /><code
+                    >let phrase = ' and time';<br />let song = `I love coding
+                    JavaScript time ${phrase.repeat(3)} again`;</code
+                  >
+                </li>
+                <li>
+                  Replace<br />
+                  <em>Replace section of text with another string</em
+                  ><br /><code
+                    >let phrase = 'The color of my ball is white and I love
+                    white soccer boots'<br />console.log(phrase.replace('white',
+                    'blue'));</code
+                  >
+                </li>
+                <li>
+                  Includes<br /><em
+                    >Determines if a pattern of text is within a string. It
+                    returns true or false</em
+                  ><br /><code
+                    >let phrase = 'The color of my ball is white and I love
+                    white soccer boots'<br />console.log(phrase.includes('blue'));</code
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>Boolean</h4>
+          <em>A Boolean is a Data Type that is either False or True </em
+          ><br /><code
+            >const isLoggedIn = true;<br />if(isLoggedIn) { console.log('User is
+            logged in'); } else { console.log('User is not logged in'); }</code
+          >
+        </li>
+        <li>
+          <h4>Null</h4>
+          <em>The Null Data Type simply indicates the absence of a value. </em
+          ><br /><code>const cart = null;<br />console.log(cart)</code>
+        </li>
+        <li>
+          <h4>Undefined</h4>
+          <em
+            >The Undefined Data Type simply indicates that a varable has been
+            created but not assigned a value. </em
+          ><br /><code>let cart;<br />console.log(cart)</code>
+        </li>
+        <li>
+          <h4>Symbol</h4>
+          <em
+            >The Symbol Data Type is a form of const variable with unique id.
+            That is each symbol is unique in itself </em
+          ><br /><code
+            >const SMALL = Symbol();<br />const XSMALL = Symbol();<br />const
+            MEDIUM = Symbol();<br />const LARGE = Symbol();<br />const XLARGE =
+            Symbol();<br />let size = XSMALL;<br />if(size == SMALL){
+            console.log("We don't have that size") }
+            console.log('Congratulations your size is available');</code
+          >
+        </li>
+      </ol>
+
+      <h3>Math</h3>
+      <ol>
+        <h4>Arithmetic Operators</h4>
+        <li>
+          <h5>Addition</h5>
+          <ul>
+            <li>[++] increment operators</li>
+            <li>[+=] addition assignment:</li>
+          </ul>
+          <ul>
+            <em
+              >The addition operators are shortforms of the traditional Math
+              Operation, they consists of the increment operatior and addition
+              assignment</em
+            ><br />
+            <code>
+              Example: Adding two numbers traditional method<br />
+              let num1 = 1; let num2 = 2; let sum = 0 <br />
+              sum = num1 + num2 // -> 3
+            </code>
+            <code>
+              Example: Adding two numbers addition assignment operator<br />
+              let let sum = 0 <br />
+              sum += 3 // -> 3
+            </code>
+            <code>
+              Example: Using the increment operator<br />
+              let let sum = 0 <br />
+              sum++ // -> 0 ++sum // -> 1
+            </code>
+          </ul>
+        </li>
+        <li>
+          <h5>Multiplication</h5>
+          <ul>
+            <li>[--] decrement operators</li>
+            <li>[-=] Multiplication assignment:</li>
+          </ul>
+          <ul>
+            <em
+              >The Multiplication operators are shortforms of the traditional
+              Math Operation, they consists of the increment operatior and
+              Multiplication assignment</em
+            ><br />
+            <code>
+              Example: Subtracting two numbers traditional method<br />
+              let num1 = 1; let num2 = 2; let sum = 0 <br />
+              sum = num2 - num1 // -> 1
+            </code>
+            <code>
+              Example: Subtracting two numbers addition assignment operator<br />
+              let let sum = 0 <br />
+              sum -= 3 // -> 3
+            </code>
+            <code>
+              Example: Using the increment operator<br />
+              let let sum = 3 <br />
+              sum-- // -> 3 --sum // -> 2
+            </code>
+          </ul>
+        </li>
+        <li>
+          <h5>Multiplication</h5>
+          <ul>
+            <li>[*=] multiplication assignment:</li>
+          </ul>
+          <ul>
+            <em
+              >The Multiplication operators are shortforms of the traditional
+              Math Operation, they consists of the Multiplication assignment</em
+            ><br />
+            <code>
+              Example: Multiplying two numbers traditional method<br />
+              let num1 = 5; let num2 = 3; let num3 = 0 <br />
+              num3 = num2 * num1 // -> 15
+            </code>
+            <code>
+              Example: Using the multiplication assignment operator<br />
+              let num = 3 <br />
+              num *= 5 // -> 15
+            </code>
+          </ul>
+        </li>
+        <li>
+          <h5>Division</h5>
+          <ul>
+            <li>[/=] division assignment:</li>
+          </ul>
+          <ul>
+            <em
+              >The Division operators are shortforms of the traditional Math
+              Operation, they consists of the Division assignment</em
+            ><br />
+            <code>
+              Example: Dividing two numbers traditional method<br />
+              let num1 = 3; let num2 = 15; let num3 = 0 <br />
+              num3 = num2 / num1 // -> 5
+            </code>
+            <code>
+              Example: Using the Division assignment operator<br />
+              let num = 15 <br />
+              num *= 3 // -> 5
+            </code>
+          </ul>
+        </li>
+        <li>
+          <h5>Modulus</h5>
+          <ul>
+            <li>[%=] modulus assignment:</li>
+          </ul>
+          <ul>
+            <em
+              >The Modulus operators are shortforms of the traditional Math
+              Operation, they consists of the Modulus assignment</em
+            ><br />
+            <code>
+              Example: Modulo of two numbers traditional method<br />
+              let num1 = 3; let num2 = 16; let num3 = 0 <br />
+              num3 = num2 % num1 // -> 1
+            </code>
+            <code>
+              Example: Using the Modulus assignment operator<br />
+              let num = 16 <br />
+              num %= 3 // -> 1
+            </code>
+            <code>
+              Example: Using the Modulo operator<br />
+              for ( let i = 0; i < numbers.length; i++) { if(i % 2 === 0) {
+              console.log(i) } } // => 0, 2, 4, 8
+            </code>
+          </ul>
+        </li>
+      </ol>
+
+      <h4>Order of Operations</h4>
+      <ul>
+        <li>PEMDAS</li>
+      </ul>
+      <ul>
+        <em
+          >PEMDAS is an acronym for Parentisis Exponential, Multiplication,
+          Division, Addition and Subtraction - which defines the order of
+          Arithmetic operations</em
+        ><br />
+
+        <code>
+          Example: Using PEMDAS<br />
+          let result = 2 + 3 * 15 / 4 - 45 // -> -31.75<br />
+          Expected operation<br />
+          let result = ((2 + 3) * 15) / 4 - 45 // -> -26.25<br />
+          JavaScript Operation - computed this using PEMDAS<br />
+          let result = 2 + (3 * 15) / 4 - 45 // -> -31.75
+        </code>
+      </ul>
+
+      <h4>Math Properties</h4>
+      <ul>
+        <li>[ ] euler's Number(Math.E)</li>
+        <li>[ ] pi(Math.PI)</li>
+      </ul>
+      <ul>
+        <em>
+          These are mathematical constants<br />
+          Examples: <br />
+          const Euler = Math.E // -> 2.718281828459045<br />
+          const PI = Math.PI // -> 3.141592653589793
+        </em>
+      </ul>
+      <h4>Math Methods</h4>
+      <ul>
+        <li>
+          [ ] absolute values(Math.abs)<br />
+          <em
+            >Example:<br />
+            let VAT = 756.378463639324429989 const absoluteValueOfVAT =
+            Math.abs(VAT) console.log(absoluteValueOfVAT) // -> 756.37846364
+          </em>
+        </li>
+        <br />
+        <li>
+          [ ] floor(Math.floor)
+          <div>
+            <em
+              >Example:<br />
+              let VAT = 756.378463639324429989 const ValueOfVAT =
+              Math.floor(VAT) console.log(ValueOfVAT) // -> 756
+            </em>
+          </div>
+        </li><br>
+        <br />
+        <li>
+          [ ] ceiling (Math.ceil)
+          <div>
+            <em
+              >Example:<br />
+              let VAT = 756.378463639324429989 const ValueOfVAT = Math.ceil(VAT)
+              console.log(ValueOfVAT) // -> 757
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] logarithm (Math.log)
+          <div>
+            <em
+              >Example:<br />
+              let VAT = 756.378463639324429989 const ValueOfVAT = Math.log(VAT)
+              console.log(ValueOfVAT) // -> 6.628541864194039
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] maximum (Math.max)
+          <em>Returns the maximum of a list of numbers</em>
+          <div>
+            <em
+              >Example:<br />
+              const ValueOfVAT = Math.max(1,2,4,29,11,32)
+              console.log(ValueOfVAT) // -> 32
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] minimum (Math.min)
+          <em>Returns the minimum of a list of numbers</em>
+          <div>
+            <em
+              >Example:<br />
+              const ValueOfVAT = Math.min(1,2,4,29,11,32)
+              console.log(ValueOfVAT) // -> 1
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] power (Math.pow)
+          <em>Returns the power of a number raised to an exponent</em>
+          <div>
+            <em
+              >Example:<br />
+              let num = 2 let raiseToPower3 = Math.pow(num, 3)
+              console.log(raiseToPower3) // -> 8
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] random (Math.random)
+          <em>Returns a random number between 0 and 1</em>
+          <div>
+            <em
+              >Example1<br />
+              <code>
+                let randomNumber = Math.random() console.log(randomNumber) // ->
+                random number
+              </code>
+              Example2 - Using Math.random() to return a random number between a
+              minimum and maximum value<br />
+              <code>
+                // Create a function function<br> 
+                randomBetween(min, max) { random
+                = Math.floor(Math.random() * (max - min) + min)
+                return random
+              </code>
+              }
+            </em>
+          </div>
+        </li><br>
+
+        <li>
+          [ ] round (Math.round)
+          <em>Returns or rounds a number to the nearest whole number</em>
+          <div>
+            <em
+              >Example:<br />
+             <code>
+              let num = 75.768923; <br> 
+              let nearestWholeNumber = Math.round(num)
+              console.log(nearestWholeNumber) // -> 76
+             </code>             
+            </em>
+          </div>
+        </li><br>
+        <li>
+          [ ] square root (Math.sqrt)
+          <em>Returns square root of a number</em>
+          <div>
+            <em
+              >Example:<br />
+             <code>
+              let num = 9; <br> 
+              let squareRoot = Math.sqrt(num)
+              console.log(squareRoot) // -> 3
+             </code>             
+            </em>
+          </div>
+        </li>
+      </ul>
+      <h3>JavaScript - Logic & Conditionals</h3>
+      <ol>
+        <h4>Logic</h4>
+        <li>
+          <h5>[ ] Comparison Operators</h5>
+          <em>Comparison operators are used to compare values. They return either true or false depending on the values compared</em>
+          <ul>
+            <li>
+              [ ] equality operator(==)<br>
+              <em>Tests if values are the same(equal) - With the equality operator JS implicity coerces values to the same type </em>
+              <code>
+                Example1:<br>
+                3 == 3 //-> true
+                3 == '3' //-> true. Why? Because of coercision<br>
+                Example1:<br>
+                'three' == 'four' //-> false
+                'three' == 'three' //-> true
+                'Three' == 'three' //-> false - because comparision is case sensitive            
+              </code>
+            </li>
+            <li> 
+              [ ] strict equality operator ( === )
+               <em>With the strict equality operator JS compares both
+                the value and the type</em>
+              <code>
+                Example1:<br>
+                3 === 3 //-> true
+                3 === '3' //-> false Why? Because of it compares also the type of the value<br>
+                Example1:<br>
+                'three' === 'four' //-> false
+                'three' === 'three' //-> true
+                'Three' === 'three' //-> false - because comparision is case sensitive            
+              </code>
+            </li><br>
+            <li>
+              [ ] difference between equality and strict equality operator<br>
+              <em>The diffrence between the equality operator and the
+                strict equality is that the equality will coerce values to the same type but the strict equality will NOT coerece values
+              </em>
+            </li><br>
+            <li>
+              [ ] inequality operator (!=)<br>
+               <em>Tests if values are diffrent - With the inequality operator JS implicity coerces values to the same type </em><br>
+                <code>
+                Example1:<br>
+                3 != 3 //-> false
+                3 != '3' //-> false. Why? Because of coercision<br>
+                Example1:<br>
+                'three' != 'four' //-> true
+                'three' != 'three' //-> false
+                'Three' != 'three' //-> true - because comparision is case sensitive            
+              </code>
+            </li><br>
+            <li>
+              [ ] strict inequality operator (!==)<br>
+               <em>
+                Tests if values are diffrent - With the strict inequality operator JS compares both
+                the value and the type</em><br>
+                <code>
+                Example1:<br>
+                3 !== 3 //-> true
+                3 !== '3' //-> false. Why? Because of it compares also the type of the value<br>
+                Example2:<br>
+                'three' !== 'four' //-> true
+                'three' !== 'three' //-> false
+                'Three' !== 'three' //-> true - because comparision is case sensitive            
+              </code>
+            </li>
+            <li>
+              [ ] greater than operator (>)<br>
+               <em>
+                Tests if the left operand(value) is greater than the right operand are diffrent</em><br>
+                <code>Example1:<br>
+                 4 > 5 //-> false
+                 6 > 4 // -> true
+                 </code>
+            </li><br>
+            <li>
+              [ ] less than operator (<)<br>
+               <em>
+                Tests if the left operand(value) is less than the right operand are diffrent</em><br>
+                <code>Example1:<br>
+                 4 < 5 //-> true
+                 6 < 4 // -> false
+                 </code>
+            </li><br>
+            <li>
+              [ ] greater than Or equal to (>=)<br>
+               <em>
+                Tests if the left operand(value) is greater than the right operand are diffrent</em><br>
+                <code>Example1:<br>
+                 4 >= 5 //-> false
+                 6 >= 4 // -> true
+                 5 >= 5 //-> true
+                 </code>
+            </li><br>
+            <li>
+              [ ] less than Or equal to (<=)<br>
+              <em>
+                Tests if the left operand(value) is less than the right operand are diffrent</em><br>
+                <code>Example1:<br>
+                 4 <= 5 //-> true
+                 6 <= 4 // -> false
+                 5 <= 5 //-> true
+                 </code>
+            </li>
+          
+          </ul>
+         <li>
+            <h5>[ ] Conditionals</h5>
+            <em>Conditional in JS allow you to make decisions depending on a specific condition of your program</em>
+            <ul>
+              <li>
+                [ ] If (condition) {} // then do something<br>
+                <em>
+                  The If Statement runs a bunch or series of code
+                  depending on a specific condition 
+                </em><br>
+                <code>Example1:<br>
+                 let color = 'white';<br>
+                  if(color !== 'white') {<br>
+                    // code in here will run if the condition is true
+                    console.log('We have ' + color + ' shirts in stock') //-> undefined<br>
+                  }<br>
+                  Example2:<br>
+                  let color = 'white'<br>
+
+                  if(color === 'white') {<br>
+                    // code in here will run if the condition is true
+                    console.log('We have ' + color + ' shirts in stock') // We have white shirts in stock<br>
+                  } <br>    
+                 </code>
+              </li><br>
+              <li>
+                [ ] Else<br>
+                <em>
+                  The Else Statement runs a bunch or series of code
+                  if the result of the IF condition is false
+                </em><br>
+                <code>
+                  let color = 'white';<br>
+                  if(color !== 'white') {<br>
+                    // code in here will run if the condition is true
+                      console.log('We have ' + color + ' shirts in stock')<br>
+                  } else {<br>
+                    // code in here will run if the condition is false
+                      console.log('We do not have ' + color + ' shirts in stock')
+                  }  <br>     
+                </code>
+              </li><br>
+              <li>
+                [ ] Else If<br>
+                <em>
+                  The Else if Statement test for multiple alternative conditions
+                </em><br>
+                <code>
+                  let color = 'white';<br>
+                  if(color !== 'white') {<br>
+                      // code in here will run if the condition is true
+                      console.log('We have ' + color + ' shirts in stock')<br>
+                  } else if(color === 'black') {<br>
+                      console.log('We do not have ' + color + ' shirts in stock')<br>
+                  } else if(color !== 'orange') {<br>
+                      console.log('We do have ' + color + ' shirts in stock')<br>
+                  }else {<br>
+                      console.log('Out of Stock') // -> We do have white shirts in stock<br>
+                </code>
+              </li>
+              <li><br>
+                [ ] Ternary Operator<br>
+                <em>This is a shorthand for the If/Else statement</em>
+                <code>
+                  Syntax: (condition) ? true : false<br>
+                  let color = 'white';<br>
+                  (color === 'white') <br>
+                    ? console.log('We have ' + color + ' shirts in stock')<br>
+                    : console.log('Out of Stock')<br>
+                </code>
+              </li><br>
+              <li>
+                [ ] Switch Statement<br>
+                <em>
+                  The Switch Statement test for multiple alternative conditions but in a more readable form <br>
+                  <code>
+                    switch (expression) {<br>
+                      case 'Case 1'<br>
+                        // Statement 1<br>
+                      case 'Case 2'
+                        // Statement 2<br>
+                      case 'Case 3'<br>
+                        // Statement 3<br>
+                      default:<br>
+                        Statement 4<br>
+                    }<br>
+                  </code>
+                  <code>
+                    Example:<br>
+                    let color = 'blue';<br>
+                    switch (color) {<br>
+                        case 'white':<br>
+                            console.log('We have ' + color + ' shirts in stock')<br>
+                            break;<br>
+                            case 'black':<br>
+                            console.log('We have ' + color + ' shirts in stock')<br>
+                            break;<br>
+                            case 'orange':<br>
+                            console.log('We have ' + color + ' shirts in stock')<br>
+                            break;<br>
+                        default: <br>
+                            console.log('Out of Stock')<br>
+                      } //-> Out of Stock
+                  </code>
+                </em><br>
+
+              </li>
+            </ul>
+         </li>
+         <li>
+            <h5>[ ] Logical Operators</h5>
+            <em>Logical operators allow you to compare multiple conditional expressions</em><br>
+            <code>Example:<br>
+              (condition) && (condition) // returns true if both conditions are True<br>
+              (condition) || (condition) // returns true if one of conditions is True<br>
+            </code>
+
+            
+            <ul>
+              <li>[ ] And (&&)<br>
+                <em>
+                  (condition) && (condition) // returns true if both conditions are True<br>
+                </em>
+                 <code>Example1:<br>
+                 if( ( 2 < 5 ) && ( 34 < 45) ) {<br>
+                  console.log('Yup you are correct')<br>
+                 } else {<br>
+                  console.log('Aww try again')<br>
+                 }
+                </code><br>
+               
+              </li>
+              <li>[ ] Or (||)<br>
+                 <em>
+                  (condition) && (condition) // returns true if one of the conditions is True<br>
+                </em>
+                 <code>Example2:<br>
+                 if( ( 2 <= 5 ) || ( 34 < 45) ) {<br>
+                  console.log('Yup you are correct')<br>
+                 } else {<br>
+                  console.log('Aww try again')<br>
+                 }
+                </code><br>
+              </li><br>
+              <li>[ ] Not (!)<br>
+              <em>
+                  (!expression) // returns the boolean opposite <br>
+                  <code>Example3:<br>
+                  let temperature = 45<br>
+                  if(!(temperature > 50)) {<br>
+                    console.log('I\'ll put on sneakers')<br>
+                  } else {<br>
+                    console.log('I\'m not going out')<br>
+                  }
+              </em>
+              </li>
+            </ul>
+         </li>
+        </li>
+      </ol>
+      <h3>Loops</h3>
+      <em>
+        Loops allow you to run statements multiple times
+      </em><br>
+      <ol>
+        <li>
+           <h5>[ ] While Loop</h5><br>
+           <em>The While loop will run code within its block multiple times as long the condition is true</em><br>
+           <code>
+            let i = 1<br>
+            while( i <= 10) {<br>
+              console.log(i)<br>
+              i++<br>
+            }
+           </code>
+        </li>
+        <li>
+           <h5>[ ] Do While Loop</h5><br>
+           <em>The Do While loop will run code within its block at least once before running the code within its block multiple times as long as the loop condition is true</em><br>
+           <code>
+            let i = 1<br>
+            do {<br>
+              console.log(i)<br>
+              i++<br>
+            }
+            while( i <= 10 )
+           </code>
+        </li>
+        <li>
+           <h5>[ ] For In Loop</h5><br>
+           <em>The For in Loop, allows you to loop over properties of an Object</em><br>
+           <code>
+            const user = {<br> <em>The For in Loop, allows you to loop over properties of an Object</em><br>
+              name: 'Babajide', <br>
+              age: '45', <br>
+              favColor: ['blue', 'red'] <br>
+            }<br>
+            for (prop in user) {<br>
+              if(user[prop] === 'Babajide') {<br>
+                console.log('You have the right person')<br>
+              }<br>
+            }<br>
+
+           </code>
+           
+        </li>
+        <li>
+           <h5>[ ] Break</h5><br>
+             <em>The Break statement allow you to jump out of the loop</em><br>
+           <code>
+            let i = 1<br>
+            while( i <= 10) {<br>
+              if( i === 5) {<br>
+                break;<br>
+              }<br>
+              console.log(i)<br>
+              i++<br>
+            } 
+           </code>
+
+        </li>
+        <li>
+           <h5>[ ] Continue</h5><br>
+            <em>The Continue statement has the opposite effect of the break statement as it contiues the effect of looping</em><br>
+           <code>
+            // Don't do this!!!! continuous loop ahead<br>
+            let i = 1<br>
+            while( i <= 10) {<br>
+              if( i === 5) {<br>
+                console.log(i)<br>
+                continue<br>
+              }<br>
+              i++<br>
+            } 
+           </code>
+
+        </li>
+      </ol>
+       <h3>Functions</h3>
+      <em>
+        Functions are blocks of code that can be reused over and over agian. Eliminate the need to write code multiple times. Also allow you simplify larger tasks into smaller manageable chunks.
+      </em><br>
+      <ol>
+          <li><h5>[ ] function keyword</h5>
+            <em>The function keyword is used to define a function</em><br>
+            <code>Example: 1<br>
+              function greet() { <br>
+                console.log('Hello Micheal')<br>
+              } 
+          </code>
+          </li>
+          <li><h5>[ ] Arrow Functions</h5>
+          <em>The Arrow function is a more concise syntax for creating functions. It is more readable.</em><br>
+          <code>Example: 2<br>
+             const greet = () => console.log('Hello Micheal');<br>          </code>
+          </li>
+          <li><h5>[ ] Invoking<br></h5>
+            <em>You invoke or call a function by writing and including a Parentisis after the name.</em><br>
+          <code>
+            Example: 2<br>
+              const greet();<br>          
+            </code>
+          </li>
+          <li><h5>[ ] Parameters<br></h5>
+           <em>You can pass parameters(arguments) to a function by including within the Parentisis after the name.</em><br>
+          <code>
+            Example: 2<br>
+              const greet('Micheal');<br>          
+            </code>
+          </li>
+          <li>
+            <h5>[ ] Return Values<br></h5>
+            <em>You can pass parameters(arguments) to a function by including within the Parentisis after the namefunctions can return values using the return keyword.</em><br>
+          <code>
+            Example: 2<br>
+             function greet(name) {<br>
+              return `Hello ${name}`<br>
+            }<br>
+            const greeting = greet("Micheal");<br>
+            console.log(greeting)     
+          </code>
+          </li>
+      </ol>
+      </ol>
+       <h3>Arrays</h3>
+      <em>
+        Array are a type of data structure in JavaScript. Arrays can contain any data type including other arrays. Arrays are indexed from zero.
+      </em><br>
+      <ol>
+          <li><h5>[ ] Creation</h5>
+          <em>There are few ways to create arrays. You can create arrays using the Array Literal Syntax and using the Array Constructor Syntax</em><br><br>
+           <code>
+            Example: 1 - Array Literal Method<br>
+            const fruits = ['orange', 'banana', 'mango', 'watermelon']<br><br>
+            
+            Example 2 - Array Constructor Syntax<br>
+            const fruit = Array('orange', 'banana')<br>
+
+            console.log(fruit)
+          </code>
+          </li>
+          <li><h5>[ ] Retrieval</h5>
+            <em>Values are retireved from arrays using the array index</em><br><br>
+           <code>
+            Example: 1 - Array Literal Method<br>
+            const fruits = ['orange', 'banana', 'mango', 'watermelon']<br>console.log(fruit)<br><br>
+             const valueOfThirdItemInArray = fruits[2]<br>
+             console.log(valueOfThirdItemInArray)<br>
+      
+          </code>
+          </li>
+          <li><h5>[ ] Reassignment</h5>
+            <em>You can Reassign the value of an array item using the item's index</em>
+            <code>
+              Example: <br>
+              const fruits = ["orange", "banana", "mango", "watermelon"];<br>
+              fruits[2] = 'carrot'; // Assigns new value to the 3rd item of the array<br>
+              console.log(fruits)<br>
+            </code>
+          </li>
+          <li><h5>[ ] Sort</h5>
+           <em>Array can be sorted either accending or decending</em>
+            <code>
+              Example1 - Sort array of strings: <br>
+              const fruits = ["orange", "banana", "mango", "watermelon"];<br>
+              fruits.sort()<br>
+              console.log(fruits)<br><br>
+
+              Example2 - Sort an array of numbers - we sort array of number by passing a function to the array sort method<br>
+              let numbers = [2, 33, 21, 54, 90, 8, 5]<br>
+              numbers.sort((a, b) => a - b)<br>
+              console.log(numbers)
+
+             </code>
+          </li>
+          <li><h5>[ ] Push</h5>
+           <em>Items can be added to an array using the array 'push' method</em>
+            <code>
+              Example1 - Adding items to the end of array: <br>
+              const fruits = ["orange", "banana", "mango", "watermelon"];<br>
+              fruits.push('carrot')<br>
+              console.log(fruits)<br><br>
+
+              Example1 - Adding items to the front of array: <br>
+              const fruits = ["orange", "banana", "mango", "watermelon"];<br>
+              fruits.unshift('carrot')<br>
+              console.log(fruits)<br><br>
+            </code>
+          </li>
+    </ol>
+
+
+     
+     
+      
+      
+      
+      
+      
+     
+      
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+     
+    </div>
+  </body>
+</html>
